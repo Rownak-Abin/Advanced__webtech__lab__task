@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Edit User</title>
+</head>
+<body>
+	<form method="post">
+		<fieldset>
+			<legend>Edit User</legend>
+			<table>
+				<tr>
+					<td>Employee Name</td>
+					<td><input type="text" name="eName" value="<%= users[0].eName %>"></td>
+				</tr>
+				<tr>
+					<td>Company</td>
+					<td><input type="text" name="cName" value="<%= users[0].cName %>"></td>
+				</tr>
+
+				<tr>
+					<td>Contact</td>
+					<td><input type="text" name="cNo" value="<%= users[0].cNo %>"></td>
+				</tr>
+ 
+				<tr>
+					<td>Username</td>
+					<td><input type="text" name="username" value="<%= users[0].uname %>"></td>
+				</tr>
+
+
+				<tr>
+					<td>Password</td>
+					<td><input type="password" name="password" value="<%= users[0].password %>"></td>
+				</tr>
+				<tr>
+					<td>type</td>
+					<td><input type="text" name="type" value="<%= users[0].type %>"></td>
+				</tr>
+
+				<tr>
+					<td></td>
+					<td><input type="submit" name="submit" value="Submit"></td>
+				</tr>
+
+				<!--<% for(var i=0; i < users.length; i++){ %>
+			
+			<tr>
+				
+				<td><%= users[0].username %></td>
+				<td><%= users[0].password %></td>
+				<td><%= users[0].type %></td>
+			</tr>
+
+		<% } %>-->
+
+			</table>
+		</fieldset>
+	</form>
+</body>
+</html>
