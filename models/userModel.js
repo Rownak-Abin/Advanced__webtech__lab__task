@@ -26,13 +26,13 @@ module.exports= {
 
 	},
 	getAll: function(callback){
-		var sql = "select * from user";
+		var sql = "select * from user where type!='admin'";
 		db.getResults(sql, function(results){
 			callback(results);
 		});
 	},
 	insert: function(newUser, callback){
-		var sql= "INSERT INTO user (eName, cName, cNo, uname, password, picture, type) VALUES ( '"+newUser.eName+"','"+newUser.cName+"','"+newUser.cNo+"','"+newUser.username+"', '"+newUser.password+"','"+newUser.picture+"','"+newUser.type+"')";
+		var sql= "INSERT INTO user (eName, cName, cNo, uname, password, picture, type) VALUES ( '"+newUser.eName+"','"+newUser.cName+"','"+newUser.cNo+"','"+newUser.uname+"', '"+newUser.password+"','"+newUser.picture+"','"+newUser.type+"')";
 		db.execute(sql, function(results){
 			if(results.length >0 ){
 				callback(true);
@@ -130,7 +130,7 @@ module.exports= {
 	},
 
 	search: function(key, callback){
-		var sql = "SELECT * FROM user WHERE eName LIKE '"+key+"%' AND type!='admin'";
+		var sql = "SELECT * FROM user WHERE uname LIKE '"+key+"%' AND type!='admin'";
 		console.log(sql);
 		db.getResults(sql, function(results){
 

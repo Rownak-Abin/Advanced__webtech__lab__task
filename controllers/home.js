@@ -75,7 +75,7 @@ router.get('/userlist', (req, res)=>{
 				var str = "";
 				for(i=0;i<results.length;i++)
 				{
-					str+='<a style="position:relative; left:30px; font-size:20px; margin-top:20px;" href="/user/edit/'+results[i].id+'">'+results[i].eName+'</a><br><br>';
+					str+='<a style="position:relative; left:30px; font-size:20px; margin-top:20px;" href="/user/edit/'+results[i].id+'">'+results[i].uname+'</a><br><br>';
 
 				}
 				console.log("in ajax "+str);
